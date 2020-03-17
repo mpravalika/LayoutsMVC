@@ -1,0 +1,40 @@
+﻿#Main {
+    position: absolute;
+    width: 100%;
+    height: 30%
+}
+#img {
+    width: 100%;
+    height: 100%
+}
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: palevioletred;
+}
+li
+{
+    float: left;
+}
+
+    li a
+    {
+        display: block;
+        color: blue;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover:not(.active) {
+            background-color: darkred;
+        }
+#menu 
+{
+    position: absolute;
+    top:30%;
+    width: 100%;
+}

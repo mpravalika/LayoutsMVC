@@ -1,0 +1,15 @@
+﻿@model LayoutsMVC.Models.EMPDATA
+@{
+    ViewBag.Title = "Editbtn";
+}
+
+<h2>Editbtn</h2>
+@using (Html.BeginForm())
+{
+    if (ViewBag.msg != null)
+    {
+        <h3>@ViewBag.msg</h3>
+    }
+}
+
+

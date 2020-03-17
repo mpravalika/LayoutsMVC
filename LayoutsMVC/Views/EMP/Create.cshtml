@@ -1,0 +1,53 @@
+﻿@model LayoutsMVC.Models.EMPDATA
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Insert", "EMP"))
+{
+    <table>
+        <tr>
+            <td>EMPNO</td>
+            <td>@Html.TextBoxFor(A => A.EMPNO)</td>
+        </tr>
+        <tr>
+            <td>ENAME</td>
+            <td>@Html.TextBoxFor(A => A.ENAME)</td>
+        </tr>
+        <tr>
+            <td>JOB</td>
+            <td>@Html.TextBoxFor(A => A.JOB)</td>
+        </tr>
+        <tr>
+            <td>MGR</td>
+            <td>@Html.TextBoxFor(A => A.MGR)</td>
+        </tr>
+        <tr>
+            <td>HIREDATE</td>
+            <td>@Html.TextBoxFor(A => A.HIREDATE)</td>
+        </tr>
+        <tr>
+            <td>SALARY</td>
+            <td>@Html.TextBoxFor(A => A.SAL)</td>
+        </tr>
+        <tr>
+            <td>COMMISION</td>
+            <td>@Html.TextBoxFor(A => A.COMM)</td>
+        </tr>
+        <tr>
+            <td>DEPTNO</td>
+            <td>@Html.TextBoxFor(A => A.DEPTNO)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Insert" /></td>
+        </tr>
+    </table>
+    if (ViewBag.msg != null)
+    {
+        @ViewBag.msg;
+    }
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

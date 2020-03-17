@@ -1,0 +1,38 @@
+﻿@model IEnumerable<LayoutsMVC.Models.EMPDATA>
+@{
+    ViewBag.Title = "Check";
+    Layout = "~/Views/Shared/_MasterLayoutPage.cshtml";
+}
+<h2>Check</h2>
+@using (Html.BeginForm())
+{
+    if (Model!= null)
+    {
+        <table>
+            <tr>
+                <td>Empno</td>
+                <td>Ename</td>
+                <td>Job</td>
+                <td>Mgr</td>
+                <td>Hiredate</td>
+                <td>Sal</td>
+                <td>Comm</td>
+                <td>Deptno</td>
+            </tr>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>@i.EMPNO</td>
+                    <td>@i.ENAME</td>
+                    <td>@i.JOB</td>
+                    <td>@i.MGR</td>
+                    <td>@i.HIREDATE</td>
+                    <td>@i.SAL</td>
+                    <td>@i.COMM</td>
+                    <td>@i.DEPTNO</td>
+                </tr>
+            }
+        </table>
+    }
+}
+

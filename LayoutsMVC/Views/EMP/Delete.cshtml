@@ -1,0 +1,16 @@
+﻿@model LayoutsMVC.Models.EMPDATA
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+@using (Html.BeginForm())
+{
+    if (ViewBag.msg != null)
+    {
+        <h3>@ViewBag.msg</h3>
+    }
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Check","Checkbox"))
+{
+    <table>
+        <tr>
+            <td><input type="submit" value="submit" /></td>
+        </tr>
+    </table>
+    if (ViewBag.L != null)
+    {
+        <table>
+            <tr>
+                <td>EMPNO</td>
+                <td>ENAME</td>
+                <td>JOB</td>
+                <td>MGR</td>
+                <td>HIREDATE</td>
+                <td>SAL</td>
+                <td>COMM</td>
+                <td>DEPTNO</td>
+            </tr>
+            @foreach (var item in ViewBag.L as IList<LayoutsMVC.Models.EMPDATA>)
+            {
+                <tr>
+                    <td>@Html.CheckBox("chk",new { @value=item.EMPNO})</td>
+                    <td>@item.EMPNO</td>
+                    <td>@item.ENAME</td>
+                    <td>@item.JOB</td>
+                    <td>@item.MGR</td>
+                    <td>@item.HIREDATE</td>
+                    <td>@item.SAL</td>
+                    <td>@item.COMM</td>
+                    <td>@item.DEPTNO</td>
+                </tr>
+            }
+        </table>
+    }
+}
